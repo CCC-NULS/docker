@@ -1,11 +1,12 @@
 FROM centos
 LABEL maintainer "Angelillou <amalcaraz89@gmail.com>"
 
-ENV PACKAGE "NULS_Wallet_beta3.2-linux.tar.gz"
-ENV PACKAGE_FOLDER "NULS_Wallet_beta3.2"
-ENV URL="http://nuls-usa-west.oss-us-west-1.aliyuncs.com/beta3.2/${PACKAGE}"
+ENV PACKAGE "NULS_Wallet_linux64_v2.0.0.tar.gz"
+ENV URL="http://nuls-usa-west.oss-us-west-1.aliyuncs.com/2.0/${PACKAGE}"
+ENV PACKAGE_FOLDER "NULS_Wallet"
 
 RUN curl ${URL} --output ./${PACKAGE}
+
 RUN ls -la .
 RUN tar -xvf ./${PACKAGE} \
     && mv ${PACKAGE_FOLDER} /nuls \
@@ -19,9 +20,9 @@ COPY nuls.ncf /nuls/nuls.ncf
 
 VOLUME /nuls/data /nuls/logs
 
-EXPOSE 18001
-EXPOSE 18002
-EXPOSE 18003
+EXPOSE 8001
+EXPOSE 8002
+EXPOSE 8003
 
 CMD ["./start"]
 
