@@ -1,4 +1,4 @@
-VERSION=2.0.0
+VERSION=2.1.0
 IMAGE=nuls/client-node:${VERSION}
 CONTAINER=nuls_${VERSION}
 VOLUME=${PWD}
@@ -32,3 +32,6 @@ shell:
 
 stop:
 	docker kill ${CONTAINER}
+
+publish:
+	docker push ${IMAGE}
