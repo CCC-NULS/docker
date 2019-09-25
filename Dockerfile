@@ -1,9 +1,9 @@
 FROM centos
 LABEL maintainer "Angelillou <amalcaraz89@gmail.com>"
 
-ENV PACKAGE "NULS_Wallet_beta3.2-linux.tar.gz"
-ENV PACKAGE_FOLDER "NULS_Wallet_beta3.2"
-ENV URL="http://nuls-usa-west.oss-us-west-1.aliyuncs.com/beta3.2/${PACKAGE}"
+ENV PACKAGE "NULS_Wallet_linux64_v2.1.0_beta.tar.gz"
+ENV PACKAGE_FOLDER "NULS_Wallet_linux64_v2.1.0_beta"
+ENV URL="http://nuls-usa-west.oss-us-west-1.aliyuncs.com/2.1/${PACKAGE}"
 
 RUN curl ${URL} --output ./${PACKAGE}
 RUN ls -la .

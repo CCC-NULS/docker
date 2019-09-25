@@ -1,4 +1,4 @@
-VERSION=2.0.0-beta3.2
+VERSION=2.1.0-beta
 IMAGE=nuls/client-node:${VERSION}
 CONTAINER=nuls_${VERSION}
 VOLUME=${PWD}
