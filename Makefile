@@ -11,9 +11,9 @@ delete:
 
 run: build
 	docker run --name ${CONTAINER} -d \
-		-p 18001:18001 \
-		-p 18002:18002 \
-		-p 18003:18003 \
+		-p 8001:8001 \
+		-p 8002:8002 \
+		-p 8003:8003 \
 		-v ${VOLUME}/data:/nuls/data \
 		-v ${VOLUME}/logs:/nuls/Logs \
 		${IMAGE} \

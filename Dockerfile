@@ -6,6 +6,7 @@ ENV PACKAGE_FOLDER "NULS_Wallet_linux64_v2.1.0_beta"
 ENV URL="http://nuls-usa-west.oss-us-west-1.aliyuncs.com/2.1/${PACKAGE}"
 
 RUN curl ${URL} --output ./${PACKAGE}
+
 RUN ls -la .
 RUN tar -xvf ./${PACKAGE} \
     && mv ${PACKAGE_FOLDER} /nuls \
@@ -19,9 +20,9 @@ COPY nuls.ncf /nuls/nuls.ncf
 
 VOLUME /nuls/data /nuls/logs
 
-EXPOSE 18001
-EXPOSE 18002
-EXPOSE 18003
+EXPOSE 8001
+EXPOSE 8002
+EXPOSE 8003
 
 CMD ["./start"]
 
