@@ -1,4 +1,4 @@
-VERSION=2.3.0
+VERSION=2.4.0
 IMAGE=nuls/client-node:${VERSION}
 CONTAINER=nuls_${VERSION}
 VOLUME=${PWD}
@@ -14,6 +14,8 @@ run: build
 		-p 8001:8001 \
 		-p 8002:8002 \
 		-p 8003:8003 \
+		-p 8004:8004 \
+		-p 8006:8006 \
 		-v ${VOLUME}/data:/nuls/data \
 		-v ${VOLUME}/logs:/nuls/Logs \
 		${IMAGE} \

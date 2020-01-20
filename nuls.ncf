@@ -136,3 +136,16 @@ interval=1000
 serverIp=0.0.0.0
 #httpServer的启动port
 serverPort=8004
+
+[nuls-module-web-wallet]
+apiModuleApi=http://127.0.0.1:8003/
+webWalletPort=8006
+webWalletHost=0.0.0.0
+
+[nuls-module-explorer]
+apiModuleApi=http://127.0.0.1:8003/
+explorerPort=1999
+explorerHost=0.0.0.0
+
+[cmd-client]
+clientVersion=2.4.0
