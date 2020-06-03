@@ -149,4 +149,4 @@ explorerPort=1999
 explorerHost=0.0.0.0
 
 [cmd-client]
-clientVersion=2.5.0
+clientVersion=2.6.0
